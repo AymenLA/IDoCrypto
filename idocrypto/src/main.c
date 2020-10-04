@@ -13,6 +13,7 @@
 int32_t main (void)
 {
     printf("MAIN> [DBG] : first print\n");
+    printf("MAIN> [DBG] : blah blah\n");
     return app_ok;
 }
 /*********************** PRIVATE FUNCTION DECLARATIONS ***********************/
