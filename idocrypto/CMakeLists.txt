@@ -39,3 +39,4 @@ add_definitions(-DBUILD_APP)
 
 #add_custom_target(tests)
 add_executable(idocrypto ${TARGET_SOURCES} ${HEADER_FILES})
+TARGET_LINK_LIBRARIES(idocrypto crypto)
