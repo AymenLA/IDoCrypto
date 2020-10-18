@@ -25,7 +25,7 @@ int32_t idocrypto_sha256_init (SHA256_CTX *ctx)
 
         sha256_ret = SHA256_Init(ctx);
         /* OpenSSL SHA interfaces return 1 if OK, 0 if error */
-        if(sha256_ret != 1) 
+        if(sha256_ret != 0) 
         {
             app_ret = app_ok;
         }
@@ -51,7 +51,7 @@ int32_t idocrypto_sha256_update (SHA256_CTX *ctx, const void *data, size_t len)
     {
         sha256_ret = SHA256_Update (ctx, data, len);
         /* OpenSSL SHA interfaces return 1 if OK, 0 if error */
-        if(sha256_ret != 1) 
+        if(sha256_ret != 0) 
         {
             app_ret = app_ok;
         }
@@ -77,7 +77,7 @@ int32_t idocrypto_sha256_final (unsigned char *md, SHA256_CTX *ctx)
     {
         sha256_ret = SHA256_Final (md, ctx);
         /* OpenSSL SHA interfaces return 1 if OK, 0 if error */
-        if(sha256_ret != 1) 
+        if(sha256_ret != 0) 
         {
             app_ret = app_ok;
         }

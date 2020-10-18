@@ -11,10 +11,10 @@
 #include <openssl/sha.h>
 
 /******************************* GLOBAL DEFINES ******************************/
-/* \brief size of hashed buffer, defined to 20 by OpenSSL in order to be compiant to 
+/* \brief size of hashed buffer, defined to 32 by OpenSSL in order to be compiant to 
     US Federal Information Processing Standard FIPS PUB 180-4 (Secure Hash Standard), 
     ANSI X9.30 */
-#define IDC_SHA_DIGEST_LENGTH   SHA_DIGEST_LENGTH
+#define IDC_SHA256_DIGEST_LENGTH   SHA256_DIGEST_LENGTH
 
 /*********************** PRIVATE FUNCTION PROTOTYPES *************************/
 
@@ -47,6 +47,6 @@ int32_t idocrypto_sha256_update (SHA256_CTX *ctx, const void *data, size_t len);
  * 
  *  \return error code, see app_error_codes.h
  */
-int32_t idocrypto_SHA256_final (unsigned char *md, SHA256_CTX *ctx);
+int32_t idocrypto_sha256_final (unsigned char *md, SHA256_CTX *ctx);
 
 #endif /* _IDOCRYPTO_H_ */
