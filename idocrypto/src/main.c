@@ -61,7 +61,9 @@ int32_t main (void)
         printf("\n");
     }
 
-    dump_tab(exemple_tab, 16, 0);
+    dump_tab(sha_test, 16, 0);
+
+    dump_tab(sha256_md, IDC_SHA256_DIGEST_LENGTH, 0);
     return app_ok;
 }
 /*********************** PRIVATE FUNCTION DECLARATIONS ***********************/
